@@ -13,8 +13,6 @@ char reverseOrder(char input[], int mySize) {
 int main() {
     char input[] = "Hello, World";
     int mySize = sizeof(input)-2;
-    cout << mySize;
     reverseOrder(input, mySize);
-    //std::cout << reverseOrder(input, mySize) << std::endl;
     return 0;
 }
