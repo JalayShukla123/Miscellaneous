@@ -1,11 +1,13 @@
 #include <iostream>
+
 using namespace std;
 char board[3][3] = {{'1','2','3'},{'4','5','6'},{'7','8','9'}};
 int choice;
 int row,column;
 char turn = 'X';
 bool draw = false;
-void initializeBoard(char board[3][3]) {
+
+void initializeBoard(char board[3][3]) { //function that initializes the tic-tac-toe board
     char current = '1';
     for(int i = 0;i < 3; i++) {
         for(int j = 0;j < 3; j++) {
@@ -14,7 +16,7 @@ void initializeBoard(char board[3][3]) {
         }
     }
 }
-void display_board() {
+void display_board() { //shows the board on the console
     cout << "+---+---+---+\n";
     cout << "| " << board[0][0] << " | " << board[0][1] << " | " << board[0][2] << " |\n";
     cout << "+---+---+---+\n";
@@ -24,7 +26,7 @@ void display_board() {
     cout << "+---+---+---+\n";
 }
 
-void player_turn(){
+void player_turn(){ //the function that runs when it is the players turn and the player choose where on the board to make their move.
     if(turn == 'X'){
         cout << "X's move : ";
     }
@@ -62,7 +64,7 @@ void player_turn(){
     display_board();
 }
 
-bool gameover() {
+bool gameover() { //function runs to check if the game is over
     for(int i = 0; i < 3; i++)
     if(board[i][0] == board[i][1] && board[i][0] == board[i][2] || board[0][i] == board[1][i] && board[0][i] == board[2][i])
     return false;
@@ -78,7 +80,7 @@ bool gameover() {
     return false;
 }
 
-int main() {
+int main() { //main function
     int xWins = 0;
     int oWins = 0;
     int numOfGames = 0;
