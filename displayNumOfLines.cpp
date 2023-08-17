@@ -20,7 +20,7 @@ int main() {
             cout << lineNumber << ". " << line << endl;
         }
         else {
-            cout << "Would you like to print the next " + numOfLines + " lines? (1 for yes and anything else for no)\n";
+            cout << "Would you like to print the next " << numOfLines << " lines? (1 for yes and anything else for no)\n";
             int ans = 0;
             cin >> ans;
             if (ans == 1) {
